@@ -1,0 +1,9 @@
+{
+    "recommendations": [
+        "esbenp.prettier-vscode",
+        "vincaslt.highlight-matching-tag",
+        "formulahendry.auto-rename-tag",
+        "planbcoding.vscode-react-refactor",
+        "christian-kohler.npm-intellisense",
+    ]
+}

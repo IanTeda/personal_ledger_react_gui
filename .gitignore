@@ -1,4 +1,4 @@
-# By Default, Ignore any .*, except for:
+# By Default, Ignore any .*, except for !.:
 .*
 !.gitignore
 !.github

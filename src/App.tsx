@@ -1,6 +1,6 @@
-import { NextUIProvider } from "@nextui-org/react";
 import { NavigateOptions, RouterProvider } from "react-router";
-import router from "./router";
+import { NextUIProvider } from "@nextui-org/react";
+import routes from "./routes";
 
 declare module "@react-types/shared" {
   interface RouterConfig {
@@ -9,10 +9,11 @@ declare module "@react-types/shared" {
 }
 
 function App() {
-
+  // const navigate = useNavigate();
+  
   return (
     <NextUIProvider>
-      <RouterProvider router={router} />
+      <RouterProvider router={routes} />
     </NextUIProvider>
   );
 }

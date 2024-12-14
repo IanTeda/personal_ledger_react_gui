@@ -1,5 +1,6 @@
 {
     "recommendations": [
+        "bradlc.vscode-tailwindcss",
         "antfu.vite",
         "esbenp.prettier-vscode",
         "vincaslt.highlight-matching-tag",

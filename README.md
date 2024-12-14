@@ -1,48 +1,100 @@
-# Personal Ledger React JS GUI
+# Welcome to React Router!
 
-A React JS web gui for Personal Ledger
+A modern, production-ready template for building full-stack React applications using React Router.
 
-## Vite
+[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/remix-run/react-router-templates/tree/main/default)
 
-```bash
-npm create vite@latest . -- --template react-ts
-```
+## Features
 
-Integrate SASS
+- 🚀 Server-side rendering
+- ⚡️ Hot Module Replacement (HMR)
+- 📦 Asset bundling and optimization
+- 🔄 Data loading and mutations
+- 🔒 TypeScript by default
+- 🎉 TailwindCSS for styling
+- 📖 [React Router docs](https://reactrouter.com/)
 
-Vite does provide built-in support for .scss, .sass. There is no need to install site-specific plugins for them, but the corresponding pre-processor itself must be installed.
+## Getting Started
 
-```bash
-npm add -D sass-embedded 
-```
+### Installation
 
-Following the installation of the pre-processor, rename the `css` files to `sass` files.
-
-```bash
-mv index.css index.scss
-```
+Install the dependencies:
 
 ```bash
-mv App.css App.scss
+npm install
 ```
 
-Update `App.tsx`
+### Development
 
-```tsx
-// import import './App.css'
-import import './App.scss'
+Start the development server with HMR:
+
+```bash
+npm run dev
 ```
 
-Update `main.tsx`
+Your application will be available at `http://localhost:5173`.
 
-```tsx
-// import './App.css'
-import './App.scss'
+## Building for Production
+
+Create a production build:
+
+```bash
+npm run build
 ```
 
-[Vite Readme](VITE_README.md)
+## Deployment
 
+### Docker Deployment
 
-#### Reference
+This template includes three Dockerfiles optimized for different package managers:
 
-- [Vite - CSS Pre-processors](https://vite.dev/guide/features.html#css-pre-processors)
+- `Dockerfile` - for npm
+- `Dockerfile.pnpm` - for pnpm
+- `Dockerfile.bun` - for bun
+
+To build and run using Docker:
+
+```bash
+# For npm
+docker build -t my-app .
+
+# For pnpm
+docker build -f Dockerfile.pnpm -t my-app .
+
+# For bun
+docker build -f Dockerfile.bun -t my-app .
+
+# Run the container
+docker run -p 3000:3000 my-app
+```
+
+The containerized application can be deployed to any platform that supports Docker, including:
+
+- AWS ECS
+- Google Cloud Run
+- Azure Container Apps
+- Digital Ocean App Platform
+- Fly.io
+- Railway
+
+### DIY Deployment
+
+If you're familiar with deploying Node applications, the built-in app server is production-ready.
+
+Make sure to deploy the output of `npm run build`
+
+```
+├── package.json
+├── package-lock.json (or pnpm-lock.yaml, or bun.lockb)
+├── build/
+│   ├── client/    # Static assets
+│   └── server/    # Server-side code
+```
+
+## Styling
+
+This template comes with [Tailwind CSS](https://tailwindcss.com/) already configured for a simple default starting experience. You can use whatever CSS framework you prefer.
+
+---
+
+Built with ❤️ using React Router.
